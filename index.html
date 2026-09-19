@@ -1,0 +1,812 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Aryos Group — Jobs Abroad from the Middle East</title>
+  <meta name="description" content="Aryos Group helps workers and professionals from the Middle East find verified jobs across Europe, the USA and Canada, with full visa and documentation support.">
+  <meta name="theme-color" content="#0A2A4F">
+  <!-- Link previews. {{ORIGIN}} is filled in per request by app.py:
+       these have to be absolute, and no production domain is committed. -->
+  <link rel="canonical" href="{{ORIGIN}}/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aryos Group">
+  <meta property="og:title" content="Aryos Group — Jobs Abroad from the Middle East">
+  <meta property="og:description" content="Aryos Group helps workers and professionals from the Middle East find verified jobs across Europe, the USA and Canada, with full visa and documentation support.">
+  <meta property="og:url" content="{{ORIGIN}}/index.html">
+  <meta property="og:image" content="{{ORIGIN}}/media/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aryos Group — Opportunity Has No Borders">
+  <meta property="og:locale" content="en">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aryos Group — Jobs Abroad from the Middle East">
+  <meta name="twitter:description" content="Aryos Group helps workers and professionals from the Middle East find verified jobs across Europe, the USA and Canada, with full visa and documentation support.">
+  <meta name="twitter:image" content="{{ORIGIN}}/media/og-cover.jpg">
+  <!-- Icons. favicon.ico sits at the root because that is where browsers
+       look unprompted; the SVG is what modern tabs actually paint. -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+  <!-- Fonts are self-hosted and subset (69 KB for both). Preloaded because
+       they are same-origin and needed for first paint; see media/fonts/. -->
+  <link rel="preload" href="media/fonts/inter-var-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <!-- Removes the no-JS guard before first paint, so scroll-reveal elements
+       never flash on screen before their entrance animation. -->
+  <script>
+    document.documentElement.classList.remove('no-js');
+    /* Direction and lang applied before paint: switching them after the first
+       frame makes an RTL page visibly jump. */
+    try {
+      /* The store helper writes JSON, so the raw value arrives quoted:
+         "ckb" rather than ckb. Parse it, falling back to stripping the
+         quotes in case it was ever written plain. */
+      var _raw = localStorage.getItem('aryos.lang');
+      var _l = null;
+      try { _l = JSON.parse(_raw); } catch (e) { _l = _raw && _raw.replace(/^"|"$/g, ''); }
+
+      /* No saved choice: take the language the phone or computer is set to,
+         so an Arabic or Kurdish device is laid out right-to-left on the very
+         first frame. Without this the page painted LTR and then flipped.
+         script.js repeats the match properly once it loads — this only has
+         to get lang and direction right for the first paint. */
+      if (!_l) {
+        var _want = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language || ''];
+        for (var _i = 0; _i < _want.length && !_l; _i++) {
+          _l = String(_want[_i] || '').trim().replace(/_/g, '-') || null;
+        }
+        /* Sorani is the only Kurdish the site carries. */
+        var _b = _l ? _l.split('-')[0].toLowerCase() : '';
+        if (_b === 'ku' || _b === 'kmr' || _b === 'sdh') _l = 'ckb';
+      }
+
+      if (_l) {
+        document.documentElement.lang = _l;
+        document.documentElement.dir =
+          /^(ar|he|fa|ur|ckb|ps|sd|ug|yi|dv)\b/.test(_l) ? 'rtl' : 'ltr';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" data-header>
+  <div class="container header__inner">
+
+    <a class="back-btn" href="index.html" data-back data-back-optional hidden
+       aria-label="Go back to the previous page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+      <span class="back-btn__label">Back</span>
+    </a>
+
+    <a class="logo" href="index.html" aria-label="Aryos Group — home">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">
+        <span class="logo__name">ARYOS</span>
+        <span class="logo__sub">GROUP</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--primary btn--sm header__cta" href="jobs.html" data-i18n="cta.findJob">Find a Job</a>
+
+    <button class="lang-btn" type="button" data-lang-button
+            aria-expanded="false" aria-haspopup="dialog" aria-label="Choose your language">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+      <span data-lang-current>EN</span>
+    </button>
+
+    <button class="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="nav-toggle__label" data-i18n="cta.menu">Menu</span>
+    </button>
+
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html" aria-current="page" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__actions">
+      <!-- Replace with your real phone / WhatsApp numbers -->
+      <a class="btn btn--outline btn--block" href="tel:+9647500000000" data-i18n="cta.call">Call office</a>
+      <a class="btn btn--ghost btn--block" href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ HERO VIDEO ============================ -->
+  <section class="hero" data-hero>
+    <!-- data-hero-slides lists the hero images, in order, by their base name.
+         Each name expects media/<name>-{480,750,1080,1280}.{webp,jpg} — run
+         the resize step and the four sizes are generated for you.
+
+         The FIRST name is the one in the <picture> below and always loads. The
+         rest are fetched by script.js only after the page is idle, and only on
+         a connection that can spare it, so a phone on mobile data still pays
+         for exactly one image. One name = no slideshow, just a static hero. -->
+    <div class="hero__media" data-hero-slides="hero-poster:480|750|941, hero-rome:480|750|941, hero-london:480|750|941, hero-paris:480|750|941, hero-newyork:480|750|941, hero-stockholm:480|750|941">
+      <!-- The still IS the hero on a phone. It is the largest thing above the
+           fold, so it loads at the width the device actually needs (35 KB at
+           750px rather than 145 KB) and nothing blocks it.
+
+           The clip is opt-in: script.js attaches media/hero.mp4 only on a big
+           screen with a connection that can afford it, so a phone on mobile
+           data never requests the video at all. Drop your own hero.mp4 into
+           media/ and it is picked up with no code change; leave it out and the
+           still carries the section on its own. -->
+      <picture>
+        <source type="image/webp"
+                srcset="media/hero-poster-480.webp 480w,
+                        media/hero-poster-750.webp 750w,
+                        media/hero-poster-941.webp 941w"
+                sizes="100vw">
+        <img class="hero__still"
+             src="media/hero-poster-750.jpg"
+             srcset="media/hero-poster-480.jpg 480w,
+                        media/hero-poster-750.jpg 750w,
+                        media/hero-poster-941.jpg 941w"
+             sizes="100vw" width="941" height="1672"
+             fetchpriority="high" decoding="async" alt="">
+      </picture>
+
+      <video class="hero__video" data-hero-video data-src="media/hero.mp4"
+             muted loop playsinline preload="none"
+             aria-label="Aryos Group promotional video, no sound"></video>
+      <div class="hero__scrim" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__inner container">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">Aryos Group — International Recruitment</p>
+      <h1 class="hero__title" data-i18n="hero.title">Opportunity Has No Borders.</h1>
+      <p class="hero__text" data-i18n="hero.text">
+        Looking to work abroad? Discover opportunities that fit your skills and
+        get clear guidance on what comes next.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg btn--magnetic" href="jobs.html" data-i18n="cta.findJob">Find a Job</a>
+        <a class="btn btn--onDark btn--lg" href="visa.html" data-i18n="cta.visaStatus">Check Your Visa Status</a>
+      </div>
+
+      <div class="hero__foot">
+        <ul class="hero__facts">
+          <li><strong data-hero-fact="countries">15+</strong><span data-i18n="hero.factCountries">Countries</span></li>
+          <li><strong data-hero-fact="roles">30+</strong><span data-i18n="hero.factRoles">Verified roles</span></li>
+          <li><strong data-hero-fact="response">48h</strong><span data-i18n="hero.factResponse">Reply time</span></li>
+        </ul>
+      </div>
+
+      <!-- Split-flap placement board — rows are built by script.js, and each
+           flip is synced to the hero photo behind it (London, Paris, New York,
+           Rome…). Each row is a live vacancy in that destination. -->
+      <div class="board" data-board role="region" aria-label="Job placements">
+        <div class="board__head">
+          <span class="board__brand">ARYOS</span>
+          <span class="board__title">PLACEMENTS</span>
+          <span class="board__clock" data-board-clock aria-hidden="true">--:--</span>
+        </div>
+        <div class="board__rows" data-board-rows></div>
+      </div>
+    </div>
+
+    <a class="hero__scroll" href="#about" aria-hidden="true" tabindex="-1">
+      <span class="hero__scroll-text">Scroll</span>
+      <span class="hero__scroll-line" aria-hidden="true"></span>
+    </a>
+
+    <!-- Only revealed once a clip is actually playing; with the still alone
+         there is nothing to pause. -->
+    <button class="hero__toggle" type="button" data-hero-toggle hidden
+            aria-label="Pause background video">
+      <svg class="ic-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5v14M15 5v14"/></svg>
+      <svg class="ic-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5l11 7-11 7z"/></svg>
+    </button>
+  </section>
+
+  <!-- Editorial sector ticker — a quiet, constant heartbeat under the hero. -->
+  <div class="ticker" aria-hidden="true">
+    <!-- "code:Label" — the code picks an SVG flag from FLAGS in script.js.
+         Europe first, then North America. Add or reorder freely; a code with
+         no artwork simply shows its label. -->
+    <div class="ticker__track" data-ticker="de:Germany|nl:Netherlands|be:Belgium|fr:France|ie:Ireland|at:Austria|pl:Poland|it:Italy|es:Spain|pt:Portugal|gr:Greece|se:Sweden|no:Norway|fi:Finland|gb:United Kingdom|us:USA|ca:Canada">
+      <span>Germany</span><span>Netherlands</span><span>Belgium</span><span>France</span><span>Ireland</span><span>Austria</span><span>Poland</span><span>Italy</span><span>Spain</span><span>Portugal</span><span>Greece</span><span>Sweden</span><span>Norway</span><span>Finland</span><span>United Kingdom</span><span>USA</span><span>Canada</span>
+    </div>
+  </div>
+
+  <!-- ============================ TRUST ============================ -->
+  <section class="section section--tint" aria-labelledby="trust-title">
+    <div class="container">
+      <header class="section__head" data-reveal="up">
+        <p class="eyebrow" data-i18n="trust.eyebrow">Why candidates choose us</p>
+        <h2 class="section__title" id="trust-title" data-i18n="trust.title">A recruitment process you can check</h2>
+      </header>
+
+      <ul class="trust" data-reveal-group="90">
+        <li class="trust__item" data-reveal="up">
+          <span class="trust__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.2-2.9 7.7-7 9-4.1-1.3-7-4.8-7-9V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg>
+          </span>
+          <div>
+            <h3 data-i18n="trust.1.title">Verified job opportunities</h3>
+            <p data-i18n="trust.1.text">Every employer, salary and contract is checked before a role is published here.</p>
+          </div>
+        </li>
+        <li class="trust__item" data-reveal="up">
+          <span class="trust__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></svg>
+          </span>
+          <div>
+            <h3 data-i18n="trust.2.title">Visa support</h3>
+            <p data-i18n="trust.2.text">Documents, translations, appointments and work permits handled step by step.</p>
+          </div>
+        </li>
+        <li class="trust__item" data-reveal="up">
+          <span class="trust__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+          </span>
+          <div>
+            <h3 data-i18n="trust.3.title">International hiring network</h3>
+            <p data-i18n="trust.3.text">Direct partnerships with employers across the European Union, the UK, Norway, the USA and Canada.</p>
+          </div>
+        </li>
+        <li class="trust__item" data-reveal="up">
+          <span class="trust__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <div>
+            <h3 data-i18n="trust.4.title">Fast response team</h3>
+            <p data-i18n="trust.4.text">Applications are reviewed and answered by a real person, usually within 48 hours.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ JOURNEY ============================ -->
+  <!-- Check-in counters: the five steps from application to first day. -->
+  <section class="section section--dark" id="journey" aria-labelledby="journey-title">
+    <div class="journey__glow" aria-hidden="true"></div>
+    <div class="container">
+      <header class="section__head" data-reveal="up">
+        <p class="eyebrow eyebrow--light"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="journey.eyebrow">Your journey</span></p>
+        <h2 class="section__title" id="journey-title" data-i18n="journey.title">From application to your first day</h2>
+        <p class="section__lead" data-i18n="journey.lead">One team handles every step — you always know what happens next.</p>
+      </header>
+
+      <ol class="journey" data-reveal-group="110">
+        <li class="journey__step" data-step="1" data-reveal="up">
+          <article class="journey__card ticket">
+            <header class="ticket__head">
+              <span class="ticket__code" aria-hidden="true">APL</span>
+              <span class="journey__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              </span>
+            </header>
+            <h3 data-i18n="journey.1.title">Apply</h3>
+            <p data-i18n="journey.1.text">Send your application online or by WhatsApp with your documents.</p>
+            <span class="ticket__rail" aria-hidden="true">
+              <span class="ticket__rail-fill"></span>
+              <span class="ticket__rail-now"></span>
+              <span class="ticket__rail-end"></span>
+            </span>
+            <span class="ticket__segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <footer class="ticket__foot">
+              <span class="ticket__barcode" aria-hidden="true"></span>
+              <span class="ticket__gate" aria-hidden="true">Gate 01</span>
+            </footer>
+          </article>
+        </li>
+        <li class="journey__step" data-step="2" data-reveal="up">
+          <article class="journey__card ticket">
+            <header class="ticket__head">
+              <span class="ticket__code" aria-hidden="true">DOC</span>
+              <span class="journey__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 13l2 2 4-4"/></svg>
+              </span>
+            </header>
+            <h3 data-i18n="journey.2.title">Document check</h3>
+            <p data-i18n="journey.2.text">We verify your papers, prepare translations and list anything missing.</p>
+            <span class="ticket__rail" aria-hidden="true">
+              <span class="ticket__rail-fill"></span>
+              <span class="ticket__rail-now"></span>
+              <span class="ticket__rail-end"></span>
+            </span>
+            <span class="ticket__segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <footer class="ticket__foot">
+              <span class="ticket__barcode" aria-hidden="true"></span>
+              <span class="ticket__gate" aria-hidden="true">Gate 02</span>
+            </footer>
+          </article>
+        </li>
+        <li class="journey__step" data-step="3" data-reveal="up">
+          <article class="journey__card ticket">
+            <header class="ticket__head">
+              <span class="ticket__code" aria-hidden="true">VSA</span>
+              <span class="journey__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><circle cx="12" cy="11" r="3.2"/><path d="M9 17.5h6"/></svg>
+              </span>
+            </header>
+            <h3 data-i18n="journey.3.title">Visa &amp; permit</h3>
+            <p data-i18n="journey.3.text">Work permit and visa appointment booked and followed by our office.</p>
+            <span class="ticket__rail" aria-hidden="true">
+              <span class="ticket__rail-fill"></span>
+              <span class="ticket__rail-now"></span>
+              <span class="ticket__rail-end"></span>
+            </span>
+            <span class="ticket__segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <footer class="ticket__foot">
+              <span class="ticket__barcode" aria-hidden="true"></span>
+              <span class="ticket__gate" aria-hidden="true">Gate 03</span>
+            </footer>
+          </article>
+        </li>
+        <li class="journey__step" data-step="4" data-reveal="up">
+          <article class="journey__card ticket">
+            <header class="ticket__head">
+              <span class="ticket__code" aria-hidden="true">BRD</span>
+              <span class="journey__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
+              </span>
+            </header>
+            <h3 data-i18n="journey.4.title">Boarding</h3>
+            <p data-i18n="journey.4.text">Flights arranged, airport pickup and arrival support confirmed.</p>
+            <span class="ticket__rail" aria-hidden="true">
+              <span class="ticket__rail-fill"></span>
+              <span class="ticket__rail-now"></span>
+              <span class="ticket__rail-end"></span>
+            </span>
+            <span class="ticket__segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <footer class="ticket__foot">
+              <span class="ticket__barcode" aria-hidden="true"></span>
+              <span class="ticket__gate" aria-hidden="true">Gate 04</span>
+            </footer>
+          </article>
+        </li>
+        <li class="journey__step journey__step--arrive" data-step="5" data-reveal="up">
+          <article class="journey__card ticket">
+            <header class="ticket__head">
+              <span class="ticket__code" aria-hidden="true">DAY</span>
+              <span class="journey__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 12h18"/></svg>
+              </span>
+            </header>
+            <h3 data-i18n="journey.5.title">First day at work</h3>
+            <p data-i18n="journey.5.text">You start with the contract you signed — we stay reachable afterwards.</p>
+            <span class="ticket__rail" aria-hidden="true">
+              <span class="ticket__rail-fill"></span>
+              <span class="ticket__rail-now"></span>
+              <span class="ticket__rail-end"></span>
+            </span>
+            <span class="ticket__segs" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+            <footer class="ticket__foot">
+              <span class="ticket__barcode" aria-hidden="true"></span>
+              <span class="ticket__gate" aria-hidden="true">Gate 05</span>
+            </footer>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================ COUNTRIES ============================ -->
+  <section class="section" aria-labelledby="countries-title">
+    <div class="container">
+      <header class="section__head" data-reveal="up">
+        <p class="eyebrow" data-i18n="countries.eyebrow">Where we hire</p>
+        <h2 class="section__title" id="countries-title" data-i18n="countries.title">Countries hiring right now</h2>
+        <p class="section__lead" data-i18n="countries.lead">Choose a country to open the job list already filtered.</p>
+      </header>
+
+      <!-- Dotted world map — the MagicUI <DottedMap> component ported to plain
+           DOM in script.js, since this site ships no build step. Every country
+           with an opening gets a pin that opens the job list already filtered;
+           the pins repeat the links in the grid below, which is why the map
+           itself stays out of the accessibility tree. -->
+      <div class="dotmap" data-dotmap data-reveal="up">
+        <div class="dotmap__stage" data-dotmap-stage>
+          <p class="dotmap__tip" data-dotmap-tip hidden aria-hidden="true"></p>
+        </div>
+
+        <ul class="dotmap__legend">
+          <li class="dotmap__legend-item dotmap__legend-item--origin"><span class="dotmap__legend-dot" aria-hidden="true"></span><span data-i18n="map.origin">Middle East candidates</span></li>
+          <li class="dotmap__legend-arrow" aria-hidden="true">&rarr;</li>
+          <li class="dotmap__legend-item dotmap__legend-item--dest"><span class="dotmap__legend-dot" aria-hidden="true"></span><span data-i18n="map.dest">Europe &amp; North America</span></li>
+        </ul>
+      </div>
+
+      <!-- Rendered from the job data by script.js so the counts can never drift
+           out of step with the listings. The markup below is the no-JS fallback. -->
+      <div class="regions" data-regions>
+
+        <section class="region" data-reveal="up">
+          <div class="region__head">
+            <h3 class="region__title">Europe</h3>
+            <span class="region__count">13 countries</span>
+          </div>
+          <ul class="countries">
+            <li><a class="country" href="jobs.html?country=Germany"><span class="country__row"><span class="country__flag" aria-hidden="true">🇩🇪</span><span class="country__name">Germany</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Netherlands"><span class="country__row"><span class="country__flag" aria-hidden="true">🇳🇱</span><span class="country__name">Netherlands</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Belgium"><span class="country__row"><span class="country__flag" aria-hidden="true">🇧🇪</span><span class="country__name">Belgium</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=United%20Kingdom"><span class="country__row"><span class="country__flag" aria-hidden="true">🇬🇧</span><span class="country__name">United Kingdom</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Poland"><span class="country__row"><span class="country__flag" aria-hidden="true">🇵🇱</span><span class="country__name">Poland</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Austria"><span class="country__row"><span class="country__flag" aria-hidden="true">🇦🇹</span><span class="country__name">Austria</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Sweden"><span class="country__row"><span class="country__flag" aria-hidden="true">🇸🇪</span><span class="country__name">Sweden</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Norway"><span class="country__row"><span class="country__flag" aria-hidden="true">🇳🇴</span><span class="country__name">Norway</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Finland"><span class="country__row"><span class="country__flag" aria-hidden="true">🇫🇮</span><span class="country__name">Finland</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Italy"><span class="country__row"><span class="country__flag" aria-hidden="true">🇮🇹</span><span class="country__name">Italy</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Spain"><span class="country__row"><span class="country__flag" aria-hidden="true">🇪🇸</span><span class="country__name">Spain</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Portugal"><span class="country__row"><span class="country__flag" aria-hidden="true">🇵🇹</span><span class="country__name">Portugal</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Greece"><span class="country__row"><span class="country__flag" aria-hidden="true">🇬🇷</span><span class="country__name">Greece</span></span><span class="country__meta">View roles</span></a></li>
+          </ul>
+        </section>
+
+        <section class="region" data-reveal="up">
+          <div class="region__head">
+            <h3 class="region__title">North America</h3>
+            <span class="region__count">2 countries</span>
+          </div>
+          <ul class="countries">
+            <li><a class="country" href="jobs.html?country=USA"><span class="country__row"><span class="country__flag" aria-hidden="true">🇺🇸</span><span class="country__name">USA</span></span><span class="country__meta">View roles</span></a></li>
+            <li><a class="country" href="jobs.html?country=Canada"><span class="country__row"><span class="country__flag" aria-hidden="true">🇨🇦</span><span class="country__name">Canada</span></span><span class="country__meta">View roles</span></a></li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ FEATURED JOBS ============================ -->
+  <section class="section section--tint" aria-labelledby="featured-title">
+    <div class="container">
+      <header class="section__head section__head--row" data-reveal="up">
+        <div>
+          <p class="eyebrow" data-i18n="featured.eyebrow">Latest openings</p>
+          <h2 class="section__title" id="featured-title" data-i18n="featured.title">Jobs added this week</h2>
+        </div>
+        <a class="btn btn--outline" href="jobs.html" data-i18n="featured.cta">View all jobs</a>
+      </header>
+
+      <div class="jobs jobs--featured" data-featured-jobs data-reveal="up"></div>
+    </div>
+  </section>
+
+  <!-- ============================ REVIEWS ============================
+       Cards are built from REVIEWS in script.js.
+
+       THE ENTRIES THERE ARE PLACEHOLDERS, NOT REAL CUSTOMERS. Replace them
+       with testimonials people actually gave you before this site goes live —
+       publishing invented reviews is illegal in the EU and the UK, which is
+       where you place candidates.
+       ================================================================= -->
+  <section class="section" aria-labelledby="reviews-title">
+    <div class="container">
+      <header class="section__head section__head--row" data-reveal="up">
+        <div>
+          <p class="eyebrow" data-i18n="reviews.eyebrow">In their words</p>
+          <h2 class="section__title" id="reviews-title" data-i18n="reviews.title">People we placed</h2>
+          <p class="section__lead" data-i18n="reviews.lead">Candidates who travelled with Aryos Group, in the language they wrote to us in.</p>
+        </div>
+        <a class="btn btn--outline" href="contact.html" data-i18n="reviews.cta">Share your story</a>
+      </header>
+
+      <ul class="reviews" data-reviews data-reveal="up" data-reveal-group="80"></ul>
+    </div>
+  </section>
+
+  <!-- ============================ EMPLOYERS TEASER ============================ -->
+  <section class="section section--dark" aria-labelledby="employers-teaser-title">
+    <div class="container">
+      <div class="teaser">
+        <div data-reveal="left">
+          <p class="eyebrow eyebrow--light" data-i18n="teaser.eyebrow">For employers</p>
+          <h2 class="section__title" id="employers-teaser-title" data-i18n="teaser.title">Hiring from the Middle East?</h2>
+          <p>
+            We source, screen and prepare candidates for companies across Europe and North America —
+            interviews, documents, permits and arrival handled by one team.
+          </p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="employers.html" data-reveal="right" data-i18n="teaser.cta">Hire Talent</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CONTACT STRIP ============================ -->
+  <section class="section" aria-labelledby="home-contact-title">
+    <div class="container container--narrow center" data-reveal="up">
+      <p class="eyebrow" data-i18n="home.contactEyebrow">Talk to us</p>
+      <h2 class="section__title" id="home-contact-title" data-i18n="home.contactTitle">Questions before you apply?</h2>
+      <p class="section__lead" data-i18n="home.contactLead">Call or message the office — we reply within 12 hours.</p>
+
+      <div class="home-contact__actions">
+        <a class="btn btn--primary btn--lg" href="tel:+9647500000000">Call +964 750 000 0000</a>
+        <a class="btn btn--outline btn--lg" href="https://wa.me/9647500000000" data-i18n="cta.msgWhatsapp">Message on WhatsApp</a>
+      </div>
+      <p class="note"><a href="contact.html">Or send us a message using the contact form</a></p>
+    </div>
+  </section>
+
+  <!-- ============================ ABOUT US ============================ -->
+  <section class="section section--tint" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <header class="section__head" data-reveal="up">
+        <p class="eyebrow" data-i18n="about.eyebrow">About us</p>
+        <h2 class="section__title" id="about-title" data-i18n="about.title">Built by people who made the same journey</h2>
+      </header>
+
+      <div class="about">
+
+        <div class="about__content" data-reveal="left">
+          <p class="about__lead" data-i18n="about.lead">
+            Aryos Group is an international recruitment company working with candidates from
+            the Middle East. We match people with verified employers across
+            Europe and North America, and we stay with the file until they have arrived and
+            started work.
+          </p>
+          <p>
+            Going abroad for work is one of the biggest decisions a family makes, and it is
+            usually made with incomplete information. Too many people pay money to an agent
+            and never hear back. We built Aryos Group around the opposite promise: a real
+            contract, a stated salary, a named case officer, and a file you can check yourself
+            at any time.
+          </p>
+          <p>
+            Every employer, salary and contract on this website is checked before the role is
+            published. Documents, translations, medical checks, appointments and work permits
+            are handled by our office in Erbil, and every message is answered by a person
+            within 48 hours.
+          </p>
+
+          <ul class="about__stats" data-reveal-group="90">
+            <li data-reveal="up">
+              <span class="about__stat-n">15</span>
+              <span class="about__stat-l">Countries we place candidates in</span>
+            </li>
+            <li data-reveal="up">
+              <span class="about__stat-n">48h</span>
+              <span class="about__stat-l">Maximum reply time to any enquiry</span>
+            </li>
+            <li data-reveal="up">
+              <span class="about__stat-n">1</span>
+              <span class="about__stat-l">Named case officer per file</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Founder profile -->
+        <aside class="founder" data-reveal="right" aria-labelledby="founder-name">
+          <figure class="founder__figure">
+            <!-- WebP first for browsers that take it, JPEG for the rest.
+                 Three widths so a high-DPI phone gets the full-resolution
+                 file instead of a scaled-up small one. -->
+            <picture>
+              <source type="image/webp"
+                      srcset="media/founder-500.webp 500w,
+                              media/founder-800.webp 800w,
+                              media/founder-1254.webp 1254w"
+                      sizes="(min-width: 900px) 420px, calc(100vw - 2.5rem)">
+              <img class="founder__photo"
+                   src="media/founder-800.jpg"
+                   srcset="media/founder-500.jpg 500w,
+                           media/founder-800.jpg 800w,
+                           media/founder-1254.jpg 1254w"
+                   sizes="(min-width: 900px) 420px, calc(100vw - 2.5rem)"
+                   width="1254" height="1254" loading="lazy" decoding="async"
+                   alt="Karwan Karrem, founder and CEO of Aryos Group">
+            </picture>
+            <figcaption class="founder__badge">Founder &amp; CEO</figcaption>
+          </figure>
+
+          <div class="founder__body">
+            <h3 class="founder__name" id="founder-name">Karwan Karrem</h3>
+            <p class="founder__role" data-i18n="founder.role">Founder &amp; Chief Executive Officer</p>
+
+            <dl class="founder__facts">
+              <div>
+                <dt>From</dt>
+                <dd>Erbil, Kurdistan Region</dd>
+              </div>
+              <div>
+                <dt>Based in</dt>
+                <dd>United Kingdom</dd>
+              </div>
+              <div>
+                <dt>Age</dt>
+                <dd>36</dd>
+              </div>
+            </dl>
+
+            <p class="founder__bio">
+              Karwan founded Aryos Group to give candidates from the Middle East
+              a route abroad they can verify at every step. Working between the UK and the
+              Erbil office, he leads the employer partnerships the company is built on and
+              sets the standard every file is held to.
+            </p>
+
+            <blockquote class="founder__quote">
+              <p>Nobody should have to gamble their savings on a promise. If we publish a job,
+                 the contract is real and the salary is written down.</p>
+            </blockquote>
+
+            <!-- ==================== SOCIAL LINKS ====================
+                 All four are icon-only for now: the accounts are being moved to
+                 the Aryos Group name, so none of them link anywhere.
+
+                 To switch one on, replace its href="#" with the real profile
+                 URL, drop the is-todo class and the data-todo attribute, and
+                 restore target="_blank" rel="noopener". is-todo is what greys
+                 the icon out and blocks the click. -->
+            <nav class="socials" aria-label="Aryos Group on social media">
+              <a class="social social--tiktok is-todo"
+                 href="#" data-todo="Replace with the TikTok profile URL"
+                 aria-label="Aryos Group on TikTok — link coming soon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M16.5 3c.3 2 1.5 3.5 3.5 3.9v2.7c-1.3.1-2.6-.2-3.7-.9v5.9c0 3.6-2.6 6.4-6 6.4A5.9 5.9 0 0 1 4.5 15c0-3.3 2.7-6 6-6 .4 0 .8 0 1.1.1v2.9c-.3-.1-.7-.2-1.1-.2A3.2 3.2 0 1 0 13.7 15V3h2.8z"/>
+                </svg>
+                <span>TikTok</span>
+              </a>
+
+              <a class="social social--telegram is-todo"
+                 href="#" data-todo="Replace with the Telegram channel URL"
+                 aria-label="Aryos Group on Telegram — link coming soon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21.4 3.5 2.9 10.6c-1.1.4-1.1 1.1-.2 1.4l4.7 1.5 1.8 5.5c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.2-2.2 4.6 3.4c.8.5 1.4.2 1.6-.8l3-14c.3-1.2-.5-1.8-1.3-1.5l-.6.3zM8.6 13.1l9.8-6.2c.4-.3.8-.1.5.2l-8.2 7.4-.3 3.4-1.8-4.8z"/>
+                </svg>
+                <span>Telegram</span>
+              </a>
+
+              <a class="social social--instagram is-todo"
+                 href="#" data-todo="Replace with the Instagram profile URL"
+                 aria-label="Aryos Group on Instagram — link coming soon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"/>
+                  <circle cx="12" cy="12" r="4"/>
+                  <circle cx="17.2" cy="6.8" r="1.2"/>
+                </svg>
+                <span>Instagram</span>
+              </a>
+
+              <a class="social social--facebook is-todo"
+                 href="#" data-todo="Replace with the Facebook page URL"
+                 aria-label="Aryos Group on Facebook — link coming soon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M14.5 8.5V6.8c0-.8.2-1.3 1.4-1.3h1.6V2.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v1.8H8.4v3h2.7V21h3.4v-9.5h2.7l.4-3h-3.1z"/>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </nav>
+
+            <a class="btn btn--outline btn--block" href="contact.html" data-i18n="cta.contactTeam">Contact the team</a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="container footer__grid" data-reveal-group="110">
+
+    <div class="footer__brand" data-reveal="up">
+      <span class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <span class="logo__name">ARYOS</span>
+          <span class="logo__sub">GROUP</span>
+        </span>
+      </span>
+      <p>
+        International recruitment for candidates from the Middle East —
+        jobs, contracts and visa support across Europe and North America.
+      </p>
+    </div>
+
+    <nav class="footer__col" aria-label="Quick links" data-reveal="up">
+      <h2 class="footer__title" data-i18n="footer.quickLinks">Quick links</h2>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="terms.html">Terms &amp; Privacy</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col" data-reveal="up">
+      <h2 class="footer__title" data-i18n="footer.contact">Contact</h2>
+      <ul>
+        <li><a href="tel:+9647500000000">+964 750 000 0000</a></li>
+        <li><a href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a></li>
+        <li><a href="mailto:info@aryosgroup.com">info@aryosgroup.com</a></li>
+        <li>Gulan Street, Erbil, Iraq</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span data-year>2026</span> Aryos Group. All rights reserved.</p>
+    <p>Erbil · Berlin · Toronto</p>
+  </div>
+</footer>
+
+
+<!-- ============================ APPLY WIZARD ============================
+     Injected on every page. Opens when a candidate taps "Apply Now" on a job
+     card. Built as one overlay rather than a page so the candidate never
+     loses the job list behind them. -->
+<div class="apply" data-apply hidden>
+  <div class="apply__scrim" data-apply-close></div>
+
+  <div class="apply__panel" role="dialog" aria-modal="true"
+       aria-labelledby="apply-heading" data-apply-panel>
+
+    <header class="apply__head">
+      <div class="apply__head-row">
+        <p class="apply__job" data-apply-job>Application</p>
+        <button type="button" class="apply__close" data-apply-close aria-label="Close application">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <h2 class="sr-only" id="apply-heading">Job application</h2>
+      <div class="apply__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+           aria-valuenow="0" data-apply-progress>
+        <span class="apply__progress-bar" data-apply-bar></span>
+      </div>
+      <p class="apply__count" data-apply-count aria-live="polite"></p>
+    </header>
+
+    <div class="apply__body" data-apply-body></div>
+
+    <!-- Upload meter. Three photographs over mobile data is a long
+         silence otherwise; hidden until the send actually starts. -->
+    <div class="aprog" data-aprogress hidden>
+      <div class="aprog__bar"><span data-aprogress-fill></span></div>
+      <p class="aprog__label" data-aprogress-label role="status" aria-live="polite"></p>
+    </div>
+    <footer class="apply__foot">
+      <button type="button" class="btn btn--ghost apply__back" data-apply-back>Back</button>
+      <button type="button" class="btn btn--primary apply__next" data-apply-next>Continue</button>
+    </footer>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

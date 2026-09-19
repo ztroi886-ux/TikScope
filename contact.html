@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contact — Aryos Group</title>
+  <meta name="description" content="Call, message on WhatsApp or send a message to the Aryos Group office in Erbil. We reply to every enquiry within 48 hours.">
+  <meta name="theme-color" content="#0A2A4F">
+  <!-- Link previews. {{ORIGIN}} is filled in per request by app.py:
+       these have to be absolute, and no production domain is committed. -->
+  <link rel="canonical" href="{{ORIGIN}}/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Aryos Group">
+  <meta property="og:title" content="Contact — Aryos Group">
+  <meta property="og:description" content="Call, message on WhatsApp or send a message to the Aryos Group office in Erbil. We reply to every enquiry within 48 hours.">
+  <meta property="og:url" content="{{ORIGIN}}/contact.html">
+  <meta property="og:image" content="{{ORIGIN}}/media/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aryos Group — Opportunity Has No Borders">
+  <meta property="og:locale" content="en">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Aryos Group">
+  <meta name="twitter:description" content="Call, message on WhatsApp or send a message to the Aryos Group office in Erbil. We reply to every enquiry within 48 hours.">
+  <meta name="twitter:image" content="{{ORIGIN}}/media/og-cover.jpg">
+  <!-- Icons. favicon.ico sits at the root because that is where browsers
+       look unprompted; the SVG is what modern tabs actually paint. -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+  <!-- Fonts are self-hosted and subset (69 KB for both). Preloaded because
+       they are same-origin and needed for first paint; see media/fonts/. -->
+  <link rel="preload" href="media/fonts/inter-var-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.remove('no-js');
+    /* Direction and lang applied before paint: switching them after the first
+       frame makes an RTL page visibly jump. */
+    try {
+      /* The store helper writes JSON, so the raw value arrives quoted:
+         "ckb" rather than ckb. Parse it, falling back to stripping the
+         quotes in case it was ever written plain. */
+      var _raw = localStorage.getItem('aryos.lang');
+      var _l = null;
+      try { _l = JSON.parse(_raw); } catch (e) { _l = _raw && _raw.replace(/^"|"$/g, ''); }
+
+      /* No saved choice: take the language the phone or computer is set to,
+         so an Arabic or Kurdish device is laid out right-to-left on the very
+         first frame. Without this the page painted LTR and then flipped.
+         script.js repeats the match properly once it loads — this only has
+         to get lang and direction right for the first paint. */
+      if (!_l) {
+        var _want = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language || ''];
+        for (var _i = 0; _i < _want.length && !_l; _i++) {
+          _l = String(_want[_i] || '').trim().replace(/_/g, '-') || null;
+        }
+        /* Sorani is the only Kurdish the site carries. */
+        var _b = _l ? _l.split('-')[0].toLowerCase() : '';
+        if (_b === 'ku' || _b === 'kmr' || _b === 'sdh') _l = 'ckb';
+      }
+
+      if (_l) {
+        document.documentElement.lang = _l;
+        document.documentElement.dir =
+          /^(ar|he|fa|ur|ckb|ps|sd|ug|yi|dv)\b/.test(_l) ? 'rtl' : 'ltr';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" data-header>
+  <div class="container header__inner">
+
+    <a class="back-btn" href="index.html" data-back
+       aria-label="Go back to the previous page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+      <span class="back-btn__label">Back</span>
+    </a>
+
+    <a class="logo" href="index.html" aria-label="Aryos Group — home">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">
+        <span class="logo__name">ARYOS</span>
+        <span class="logo__sub">GROUP</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--primary btn--sm header__cta" href="jobs.html" data-i18n="cta.findJob">Find a Job</a>
+
+    <button class="lang-btn" type="button" data-lang-button
+            aria-expanded="false" aria-haspopup="dialog" aria-label="Choose your language">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+      <span data-lang-current>EN</span>
+    </button>
+
+    <button class="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="nav-toggle__label" data-i18n="cta.menu">Menu</span>
+    </button>
+
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" aria-current="page" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__actions">
+      <a class="btn btn--outline btn--block" href="tel:+9647500000000" data-i18n="cta.call">Call office</a>
+      <a class="btn btn--ghost btn--block" href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ PAGE HEAD ============================ -->
+  <div class="page-head">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li aria-current="page">Contact</li>
+        </ol>
+      </nav>
+      <div class="page-head__inner">
+        <p class="eyebrow" data-i18n="footer.contact">Contact</p>
+        <h1 class="page-head__title" data-i18n="contact.title">Talk to our team</h1>
+        <p class="section__lead" data-i18n="contact.lead">
+          Call, message on WhatsApp, or send the form below. Every message is answered by a
+          person in the Erbil office within 48 hours.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section class="section section--tint" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 class="sr-only" id="contact-title">Contact details and message form</h2>
+
+      <!-- Two fastest routes first — most people call or message rather than
+           fill in the form, so those get the largest tap targets on the page. -->
+      <div class="qcontact" data-reveal-group="90">
+        <a class="qcontact__card" href="tel:+9647500000000" data-reveal="up">
+          <span class="qcontact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M6.5 3h3l1.5 4-2 1.4a12 12 0 006.6 6.6L17 13l4 1.5v3a2 2 0 01-2.2 2A16.5 16.5 0 014.5 5.2 2 2 0 016.5 3z"/></svg>
+          </span>
+          <span>
+            <span class="qcontact__title" data-i18n="contact.callTitle">Call the office</span>
+            <span class="qcontact__value">+964 750 000 0000</span>
+            <span class="qcontact__hint">Sunday – Thursday, 09:00 – 17:00 →</span>
+          </span>
+        </a>
+
+        <a class="qcontact__card" href="https://wa.me/9647500000000" data-reveal="up">
+          <span class="qcontact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1112 20a8 8 0 01-4.1-1.1L4 20z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"/></svg>
+          </span>
+          <span>
+            <span class="qcontact__title" data-i18n="contact.waTitle">WhatsApp support</span>
+            <span class="qcontact__value">Message us directly</span>
+            <span class="qcontact__hint">Usually answered within 48h →</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="contact">
+        <!-- Phone and WhatsApp live in the two cards above, so this card is the
+             office record: email, address and opening hours. -->
+        <ul class="contact__details" data-reveal="left">
+          <li>
+            <span class="contact__label">Email</span>
+            <a class="contact__link" href="mailto:info@aryosgroup.com">info@aryosgroup.com</a>
+          </li>
+          <li>
+            <span class="contact__label">Office</span>
+            <span class="contact__text">Gulan Street, Erbil<br>Kurdistan Region, Iraq</span>
+          </li>
+          <li>
+            <span class="contact__label">Office hours</span>
+            <span class="contact__text">Sunday – Thursday, 09:00 – 17:00</span>
+          </li>
+        </ul>
+
+        <!-- Front-end only: connect this form to your own mail service or backend -->
+        <form class="contact-form panel" data-contact-form novalidate data-reveal="right">
+
+          <p class="apply-note" data-apply-note hidden></p>
+
+          <div class="field">
+            <label for="c-name">Full name</label>
+            <input type="text" id="c-name" name="name" autocomplete="name" required>
+            <p class="field__error" data-error-for="c-name" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="c-phone">Phone number</label>
+            <input type="tel" id="c-phone" name="phone" autocomplete="tel"
+                   inputmode="tel" placeholder="+964 ..." required>
+            <p class="field__error" data-error-for="c-phone" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="6"
+                      placeholder="Tell us your profession, experience and where you would like to work." required></textarea>
+            <p class="field__error" data-error-for="c-message" hidden></p>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block btn--lg">Send message</button>
+          <p class="form-status" data-contact-status role="status" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ OTHER ROUTES ============================ -->
+  <section class="section" aria-labelledby="routes-title">
+    <div class="container">
+      <header class="section__head" data-reveal="up">
+        <p class="eyebrow">Before you write</p>
+        <h2 class="section__title" id="routes-title">You may find the answer faster here</h2>
+      </header>
+
+      <ul class="countries" data-reveal-group="90">
+        <li data-reveal="zoom"><a class="country" href="jobs.html"><span class="country__name">Browse jobs</span><span class="country__meta">Open positions and salaries</span></a></li>
+        <li data-reveal="zoom"><a class="country" href="visa.html"><span class="country__name">Visa status</span><span class="country__meta">Track an existing file</span></a></li>
+        <li data-reveal="zoom"><a class="country" href="employers.html"><span class="country__name">Employers</span><span class="country__meta">Hire workers through us</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="container footer__grid" data-reveal-group="110">
+
+    <div class="footer__brand" data-reveal="up">
+      <span class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <span class="logo__name">ARYOS</span>
+          <span class="logo__sub">GROUP</span>
+        </span>
+      </span>
+      <p>
+        International recruitment for candidates from the Middle East —
+        jobs, contracts and visa support across Europe and North America.
+      </p>
+    </div>
+
+    <nav class="footer__col" aria-label="Quick links" data-reveal="up">
+      <h2 class="footer__title" data-i18n="footer.quickLinks">Quick links</h2>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="terms.html">Terms &amp; Privacy</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col" data-reveal="up">
+      <h2 class="footer__title">Contact</h2>
+      <ul>
+        <li><a href="tel:+9647500000000">+964 750 000 0000</a></li>
+        <li><a href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a></li>
+        <li><a href="mailto:info@aryosgroup.com">info@aryosgroup.com</a></li>
+        <li>Gulan Street, Erbil, Iraq</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span data-year>2026</span> Aryos Group. All rights reserved.</p>
+    <p>Erbil · Berlin · Toronto</p>
+  </div>
+</footer>
+
+
+<!-- ============================ APPLY WIZARD ============================
+     Injected on every page. Opens when a candidate taps "Apply Now" on a job
+     card. Built as one overlay rather than a page so the candidate never
+     loses the job list behind them. -->
+<div class="apply" data-apply hidden>
+  <div class="apply__scrim" data-apply-close></div>
+
+  <div class="apply__panel" role="dialog" aria-modal="true"
+       aria-labelledby="apply-heading" data-apply-panel>
+
+    <header class="apply__head">
+      <div class="apply__head-row">
+        <p class="apply__job" data-apply-job>Application</p>
+        <button type="button" class="apply__close" data-apply-close aria-label="Close application">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <h2 class="sr-only" id="apply-heading">Job application</h2>
+      <div class="apply__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+           aria-valuenow="0" data-apply-progress>
+        <span class="apply__progress-bar" data-apply-bar></span>
+      </div>
+      <p class="apply__count" data-apply-count aria-live="polite"></p>
+    </header>
+
+    <div class="apply__body" data-apply-body></div>
+
+    <!-- Upload meter. Three photographs over mobile data is a long
+         silence otherwise; hidden until the send actually starts. -->
+    <div class="aprog" data-aprogress hidden>
+      <div class="aprog__bar"><span data-aprogress-fill></span></div>
+      <p class="aprog__label" data-aprogress-label role="status" aria-live="polite"></p>
+    </div>
+    <footer class="apply__foot">
+      <button type="button" class="btn btn--ghost apply__back" data-apply-back>Back</button>
+      <button type="button" class="btn btn--primary apply__next" data-apply-next>Continue</button>
+    </footer>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

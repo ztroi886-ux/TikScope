@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# These are JSON endpoints, not pages. The "$" anchors each rule to the exact
+# path: a bare "Disallow: /jobs" matches by prefix and so also hides
+# /jobs.html, which is the page this site most needs indexed.
+Disallow: /status$
+Disallow: /jobs$
+Disallow: /apply$
+
+# Built per request by app.py, so the URLs match whatever domain
+# this deployment answers on.
+Sitemap: {{ORIGIN}}/sitemap.xml

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ckb" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Aryos Admin</title>
+  <link rel="stylesheet" href="/admin.css?v=4">
+</head>
+<body>
+  <main id="login" class="login">
+    <form id="login-form" class="login__card">
+      <div class="brand"><span>A</span><div><strong>گروپی ئاریۆس</strong><small>بەڕێوەبردنی پارێزراو</small></div></div>
+      <h1>بەخێربێیتەوە</h1>
+      <p>وشەی نهێنی داشبۆرد بنووسە.</p>
+      <label>وشەی نهێنی<input id="password" type="password" autocomplete="current-password" required autofocus></label>
+      <button class="btn btn--primary" type="submit">چوونەژوورەوە</button>
+      <p id="login-error" class="error" role="alert" hidden></p>
+    </form>
+  </main>
+
+  <div id="dashboard" class="shell" hidden>
+    <aside class="side">
+      <div class="brand brand--side"><span>A</span><div><strong>ئاریۆس</strong><small>ناوەندی بەڕێوەبردن</small></div></div>
+      <nav id="nav" aria-label="Dashboard sections">
+        <button data-view="overview" class="is-active">پوختە</button>
+        <button data-view="jobs">هەلی کار</button>
+        <button data-view="applications">داواکارییەکان</button>
+        <button data-view="clients">کڕیار و کەیسەکان</button>
+        <button data-view="reviews">هەڵسەنگاندنەکان</button>
+        <button data-view="images">وێنە سەرەکییەکان</button>
+        <button data-view="system">سیستەم و پاشەکەوت</button>
+      </nav>
+      <a class="site-link" href="/" target="_blank" rel="noopener">کردنەوەی ماڵپەڕ ↗</a>
+      <button id="logout" class="logout">چوونەدەرەوە</button>
+    </aside>
+    <section class="main">
+      <button id="global-search-action" class="global-search-trigger" type="button"><span>⌕</span><b>گەڕانی گشتی</b><small>کار، کڕیار، داواکاری، بۆچوون…</small><kbd>Ctrl K</kbd></button>
+      <header class="top"><div><p class="eyebrow">بەڕێوەبردنی ئاریۆس</p><h1 id="title">پوختە</h1><p id="view-description" class="view-description">دۆخی ئێستای کار و کەیسەکان.</p></div><div class="top__actions"><button id="export-action" class="btn" hidden>هەناردەی CSV</button><button id="primary-action" class="btn btn--primary" hidden></button></div></header>
+      <div id="notice" class="notice" hidden></div>
+      <div id="content" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <dialog id="job-dialog">
+    <form id="job-form" class="editor">
+      <header><div><p class="eyebrow">دەستکاریکەری هەلی کار</p><h2 id="job-heading">هەلی کاری نوێ</h2></div><button type="button" class="icon-btn" data-close aria-label="داخستن">×</button></header>
+      <input type="hidden" name="id">
+      <div class="form-grid">
+        <label class="wide">ناونیشانی کار<input name="title" required maxlength="120"></label>
+        <label>وڵات<input name="country" required maxlength="60"></label>
+        <label>شار<input name="city" required maxlength="80"></label>
+        <label>ناوچە<select name="region"><option value="Europe">ئەورووپا</option><option value="North America">ئەمەریکای باکوور</option><option value="Middle East">ڕۆژهەڵاتی ناوەڕاست</option><option value="Asia Pacific">ئاسیا و پاسفیک</option><option value="Other">هی تر</option></select></label>
+        <label>بەش<input name="category" required maxlength="80"></label>
+        <label>مووچە<input name="salary" required maxlength="100" placeholder="€2,500 – €3,200 / مانگ"></label>
+        <label>هاوتای مانگانە بە دۆلار<input name="salaryUsd" type="number" min="0"></label>
+        <label>کاتژمێری کار<input name="hours" maxlength="100"></label>
+        <label>جۆری دامەزراندن<select name="type"><option value="Full-time">تەواوکات</option><option value="Part-time">نیوەکات</option><option value="Seasonal">وەرزی</option><option value="Contract">گرێبەست</option></select></label>
+        <label class="wide">تاگەکان <small>بە کۆما جیایان بکەرەوە</small><input name="tags" maxlength="500"></label>
+        <label class="wide">وەسف<textarea name="desc" rows="5" maxlength="1200"></textarea></label>
+        <label class="check wide"><input name="published" type="checkbox" checked><span>یەکسەر بڵاوی بکەرەوە</span></label>
+      </div>
+      <footer><button type="button" class="btn" data-close>پاشگەزبوونەوە</button><button class="btn btn--primary" type="submit">پاشەکەوتکردن</button></footer>
+    </form>
+  </dialog>
+
+  <dialog id="global-search-dialog" class="search-dialog">
+    <div class="search-modal"><header><span>⌕</span><input id="global-search" autocomplete="off" placeholder="بە ناو، ژمارە، ناسنامە، وڵات یان وشە بگەڕێ…"><kbd>Esc</kbd></header><div id="global-search-results" class="global-results"><div class="empty">دەست بە نووسین بکە بۆ گەڕان لە هەموو داتاکان.</div></div></div>
+  </dialog>
+
+  <dialog id="preview-dialog" class="preview-dialog">
+    <div class="preview-shell"><header><div><p class="eyebrow">پێشبینینی ڕاستەوخۆ</p><h2 id="preview-title">پێشبینین</h2></div><button type="button" class="icon-btn" data-preview-close aria-label="داخستن">×</button></header><div id="preview-content"></div><footer><a id="preview-public-link" class="btn" href="/" target="_blank" rel="noopener">کردنەوە لە ماڵپەڕ ↗</a><button type="button" class="btn btn--primary" data-preview-close>داخستن</button></footer></div>
+  </dialog>
+
+  <dialog id="client-dialog">
+    <form id="client-form" class="editor">
+      <header><div><p class="eyebrow">دەستکاریکەری کەیس</p><h2 id="client-heading">کڕیاری نوێ</h2></div><button type="button" class="icon-btn" data-client-close aria-label="داخستن">×</button></header>
+      <input type="hidden" name="key">
+      <div class="form-grid">
+        <label class="wide">ناوی تەواو<input name="nameEn" required maxlength="120"></label>
+        <label>ژمارەی مۆبایل<input name="phone" maxlength="40"></label>
+        <label>ڕەگەزنامە<input name="nationality" maxlength="80"></label>
+        <label>مەبەست / ڕێگا<input name="route" maxlength="80"></label>
+        <label>دۆخ<select name="status"><option value="review">لە ژێر پێداچوونەوە</option><option value="action">پێویستی بە بەڵگەنامەیە</option><option value="approved">پەسەندکراوە</option><option value="issued">دەرکراوە</option></select></label>
+        <label>ڕێکەوتی لەدایکبوون<input name="dob" type="date"></label>
+        <label>خوێندن<input name="education" maxlength="100"></label>
+        <label class="wide">تێبینی کەیس<textarea name="note" rows="4" maxlength="1000"></textarea></label>
+        <label class="wide">ئەزموون<textarea name="experience" rows="4" maxlength="3000"></textarea></label>
+      </div>
+      <footer><button type="button" class="btn" data-client-close>پاشگەزبوونەوە</button><button class="btn btn--primary" type="submit">پاشەکەوتکردن</button></footer>
+    </form>
+  </dialog>
+
+  <input id="hero-upload" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+  <input id="job-photo-upload" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+  <script src="/admin.js?v=6" defer></script>
+</body>
+</html>

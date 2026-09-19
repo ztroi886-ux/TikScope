@@ -1,0 +1,2 @@
+# PostgreSQL driver. The app still runs with JSON files when DATABASE_URL is unset.
+psycopg[binary]>=3.2,<4

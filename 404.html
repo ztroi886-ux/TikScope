@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Page Not Found — Aryos Group</title>
+  <meta name="description" content="That page does not exist. Find open positions, check a visa status, or contact the Erbil office.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0A2A4F">
+  <!-- Icons. favicon.ico sits at the root because that is where browsers
+       look unprompted; the SVG is what modern tabs actually paint. -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+  <!-- Fonts are self-hosted and subset (69 KB for both). Preloaded because
+       they are same-origin and needed for first paint; see media/fonts/. -->
+  <link rel="preload" href="media/fonts/inter-var-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.remove('no-js');
+    /* Direction and lang applied before paint: switching them after the first
+       frame makes an RTL page visibly jump. */
+    try {
+      /* The store helper writes JSON, so the raw value arrives quoted:
+         "ckb" rather than ckb. Parse it, falling back to stripping the
+         quotes in case it was ever written plain. */
+      var _raw = localStorage.getItem('aryos.lang');
+      var _l = null;
+      try { _l = JSON.parse(_raw); } catch (e) { _l = _raw && _raw.replace(/^"|"$/g, ''); }
+
+      /* No saved choice: take the language the phone or computer is set to,
+         so an Arabic or Kurdish device is laid out right-to-left on the very
+         first frame. Without this the page painted LTR and then flipped.
+         script.js repeats the match properly once it loads — this only has
+         to get lang and direction right for the first paint. */
+      if (!_l) {
+        var _want = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language || ''];
+        for (var _i = 0; _i < _want.length && !_l; _i++) {
+          _l = String(_want[_i] || '').trim().replace(/_/g, '-') || null;
+        }
+        /* Sorani is the only Kurdish the site carries. */
+        var _b = _l ? _l.split('-')[0].toLowerCase() : '';
+        if (_b === 'ku' || _b === 'kmr' || _b === 'sdh') _l = 'ckb';
+      }
+
+      if (_l) {
+        document.documentElement.lang = _l;
+        document.documentElement.dir =
+          /^(ar|he|fa|ur|ckb|ps|sd|ug|yi|dv)\b/.test(_l) ? 'rtl' : 'ltr';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site-header" data-header>
+  <div class="container header__inner">
+
+    <a class="back-btn" href="index.html"
+       aria-label="Go back to the previous page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+      <span class="back-btn__label">Back</span>
+    </a>
+
+    <a class="logo" href="index.html" aria-label="Aryos Group — home">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">
+        <span class="logo__name">ARYOS</span>
+        <span class="logo__sub">GROUP</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html"  data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--primary btn--sm header__cta" href="contact.html">Contact us</a>
+
+    <button class="lang-btn" type="button" data-lang-button
+            aria-expanded="false" aria-haspopup="dialog" aria-label="Choose your language">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+      <span data-lang-current>EN</span>
+    </button>
+
+    <button class="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="nav-toggle__label" data-i18n="cta.menu">Menu</span>
+    </button>
+
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html"  data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__actions">
+      <a class="btn btn--outline btn--block" href="tel:+9647500000000" data-i18n="cta.call">Call office</a>
+      <a class="btn btn--ghost btn--block" href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="section">
+    <div class="container container--narrow">
+
+      <header class="section__head" data-reveal="up">
+        <p class="eyebrow" data-i18n="nf.eyebrow">Error 404</p>
+        <h1 class="section__title" data-i18n="nf.title">This page does not exist.</h1>
+        <p class="section__lead" data-i18n="nf.lead">
+          The link may be out of date, or the address mistyped. Everything the
+          site does is one tap away below.
+        </p>
+      </header>
+
+      <div class="nf__actions" data-reveal="up">
+        <a class="btn btn--primary" href="jobs.html" data-i18n="nav.jobs">Jobs</a>
+        <a class="btn btn--outline" href="visa.html" data-i18n="nav.visa">Visa Status</a>
+        <a class="btn btn--ghost" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </div>
+
+      <p class="nf__home" data-reveal="up">
+        <a href="index.html" data-i18n="nf.home">Back to the homepage</a>
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer__grid" data-reveal-group="110">
+
+    <div class="footer__brand" data-reveal="up">
+      <span class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <span class="logo__name">ARYOS</span>
+          <span class="logo__sub">GROUP</span>
+        </span>
+      </span>
+      <p>
+        International recruitment for candidates from the Middle East —
+        jobs, contracts and visa support across Europe and North America.
+      </p>
+    </div>
+
+    <nav class="footer__col" aria-label="Quick links" data-reveal="up">
+      <h2 class="footer__title" data-i18n="footer.quickLinks">Quick links</h2>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="terms.html">Terms &amp; Privacy</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col" data-reveal="up">
+      <h2 class="footer__title" data-i18n="footer.contact">Contact</h2>
+      <ul>
+        <li><a href="tel:+9647500000000">+964 750 000 0000</a></li>
+        <li><a href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a></li>
+        <li><a href="mailto:info@aryosgroup.com">info@aryosgroup.com</a></li>
+        <li>Gulan Street, Erbil, Iraq</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span data-year>2026</span> Aryos Group. All rights reserved.</p>
+    <p>Erbil · Berlin · Toronto</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

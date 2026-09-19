@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terms of Use &amp; Privacy — Aryos Group</title>
+  <meta name="description" content="Terms of use, privacy notice and data handling for Aryos Group candidates and employers — what we collect, who sees it, and your rights.">
+  <meta name="theme-color" content="#0A2A4F">
+  <!-- Link previews. {{ORIGIN}} is filled in per request by app.py:
+       these have to be absolute, and no production domain is committed. -->
+  <link rel="canonical" href="{{ORIGIN}}/terms.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Aryos Group">
+  <meta property="og:title" content="Terms of Use &amp; Privacy — Aryos Group">
+  <meta property="og:description" content="Terms of use, privacy notice and data handling for Aryos Group candidates and employers — what we collect, who sees it, and your rights.">
+  <meta property="og:url" content="{{ORIGIN}}/terms.html">
+  <meta property="og:image" content="{{ORIGIN}}/media/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Aryos Group — Opportunity Has No Borders">
+  <meta property="og:locale" content="en">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Use &amp; Privacy — Aryos Group">
+  <meta name="twitter:description" content="Terms of use, privacy notice and data handling for Aryos Group candidates and employers — what we collect, who sees it, and your rights.">
+  <meta name="twitter:image" content="{{ORIGIN}}/media/og-cover.jpg">
+  <!-- Icons. favicon.ico sits at the root because that is where browsers
+       look unprompted; the SVG is what modern tabs actually paint. -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="media/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="media/apple-touch-icon.png">
+  <!-- Fonts are self-hosted and subset (69 KB for both). Preloaded because
+       they are same-origin and needed for first paint; see media/fonts/. -->
+  <link rel="preload" href="media/fonts/inter-var-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.documentElement.classList.remove('no-js');
+    /* Direction and lang applied before paint: switching them after the first
+       frame makes an RTL page visibly jump. */
+    try {
+      /* The store helper writes JSON, so the raw value arrives quoted:
+         "ckb" rather than ckb. Parse it, falling back to stripping the
+         quotes in case it was ever written plain. */
+      var _raw = localStorage.getItem('aryos.lang');
+      var _l = null;
+      try { _l = JSON.parse(_raw); } catch (e) { _l = _raw && _raw.replace(/^"|"$/g, ''); }
+
+      /* No saved choice: take the language the phone or computer is set to,
+         so an Arabic or Kurdish device is laid out right-to-left on the very
+         first frame. Without this the page painted LTR and then flipped.
+         script.js repeats the match properly once it loads — this only has
+         to get lang and direction right for the first paint. */
+      if (!_l) {
+        var _want = navigator.languages && navigator.languages.length
+          ? navigator.languages
+          : [navigator.language || ''];
+        for (var _i = 0; _i < _want.length && !_l; _i++) {
+          _l = String(_want[_i] || '').trim().replace(/_/g, '-') || null;
+        }
+        /* Sorani is the only Kurdish the site carries. */
+        var _b = _l ? _l.split('-')[0].toLowerCase() : '';
+        if (_b === 'ku' || _b === 'kmr' || _b === 'sdh') _l = 'ckb';
+      }
+
+      if (_l) {
+        document.documentElement.lang = _l;
+        document.documentElement.dir =
+          /^(ar|he|fa|ur|ckb|ps|sd|ug|yi|dv)\b/.test(_l) ? 'rtl' : 'ltr';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header" data-header>
+  <div class="container header__inner">
+
+    <a class="back-btn" href="index.html" data-back
+       aria-label="Go back to the previous page">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+      <span class="back-btn__label">Back</span>
+    </a>
+
+    <a class="logo" href="index.html" aria-label="Aryos Group — home">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span class="logo__text">
+        <span class="logo__name">ARYOS</span>
+        <span class="logo__sub">GROUP</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--primary btn--sm header__cta" href="contact.html">Contact us</a>
+
+    <button class="lang-btn" type="button" data-lang-button
+            aria-expanded="false" aria-haspopup="dialog" aria-label="Choose your language">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+      <span data-lang-current>EN</span>
+    </button>
+
+    <button class="nav-toggle" type="button"
+            aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+      <span class="nav-toggle__bars" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="nav-toggle__label" data-i18n="cta.menu">Menu</span>
+    </button>
+
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <nav aria-label="Mobile">
+      <ul class="mobile-nav__list">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-nav__actions">
+      <a class="btn btn--outline btn--block" href="tel:+9647500000000" data-i18n="cta.call">Call office</a>
+      <a class="btn btn--ghost btn--block" href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============================ PAGE HEAD ============================ -->
+  <div class="page-head">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li aria-current="page">Terms &amp; Privacy</li>
+        </ol>
+      </nav>
+      <div class="page-head__inner">
+        <p class="eyebrow">Legal</p>
+        <h1 class="page-head__title">Terms of use and privacy notice</h1>
+        <p class="section__lead">
+          What you agree to when you apply through Aryos Group, what we do with your
+          documents, and what you can ask us to do with them.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================ TERMS ============================ -->
+  <section class="section" aria-labelledby="terms-title">
+    <div class="container container--narrow">
+      <h2 class="sr-only" id="terms-title">Terms of use and privacy notice</h2>
+
+      <p class="legal__meta" data-reveal="up">
+        Last updated <time datetime="2026-08-09">9 August 2026</time> Â·
+        Aryos Group, Gulan Street, Erbil, Kurdistan Region, Iraq
+      </p>
+
+      <div class="legal__toc panel" data-reveal="up">
+        <h2>On this page</h2>
+        <ol>
+          <li><a href="#t-who">Who we are</a></li>
+          <li><a href="#t-free">Applying is free</a></li>
+          <li><a href="#t-truth">Your responsibility for what you tell us</a></li>
+          <li><a href="#t-collect">What we collect</a></li>
+          <li><a href="#t-use">How we use it</a></li>
+          <li><a href="#t-share">Who we share it with</a></li>
+          <li><a href="#t-keep">How long we keep it</a></li>
+          <li><a href="#t-rights">Your rights</a></li>
+          <li><a href="#t-security">Security</a></li>
+          <li><a href="#t-nooffer">No guarantee of a job</a></li>
+          <li><a href="#t-employers">Terms for employers</a></li>
+          <li><a href="#t-site">Using this website</a></li>
+          <li><a href="#t-changes">Changes to these terms</a></li>
+          <li><a href="#t-contact">How to contact us</a></li>
+        </ol>
+      </div>
+
+      <div class="legal">
+
+        <section id="t-who" data-reveal="up">
+          <h2>1. Who we are</h2>
+          <p>
+            Aryos Group is an international recruitment company based in Erbil, Kurdistan
+            Region, Iraq. We introduce candidates from the Middle East to
+            employers in Europe and North America, and we prepare the documents those
+            employers and the relevant authorities require.
+          </p>
+          <p>
+            In this notice, "we" and "us" mean Aryos Group. "You" means anyone who applies
+            through this website, contacts us, or uses the visa status service.
+          </p>
+        </section>
+
+        <section id="t-free" data-reveal="up">
+          <h2>2. Applying is free</h2>
+          <p class="legal__callout legal__callout--strong">
+            Aryos Group does not charge candidates a fee to apply, to be shortlisted, or to
+            be introduced to an employer. No member of our staff will ever ask you for a
+            payment in exchange for a job offer or a faster decision.
+          </p>
+          <p>
+            If anyone claiming to represent us asks you for money, do not pay. Contact the
+            Erbil office directly on the number published on this website and tell us what
+            happened.
+          </p>
+          <p>
+            Some third parties do charge their own fees that we neither set nor receive —
+            consular visa fees, medical examinations, document translation and legalisation,
+            and travel. Where a cost like this applies to your file, your case officer will
+            tell you before it is incurred.
+          </p>
+        </section>
+
+        <section id="t-truth" data-reveal="up">
+          <h2>3. Your responsibility for what you tell us</h2>
+          <p>
+            Everything you enter in the application must be true, accurate and your own.
+            We pass your answers to employers and to consular authorities, who verify them
+            independently.
+          </p>
+          <p>
+            This matters most for the question about past arrests or convictions. Consulates
+            run their own criminal record checks. A case you declare honestly is very often
+            not an obstacle; the same case discovered after you denied it usually means
+            refusal, and can result in a multi-year ban on reapplying to that country.
+          </p>
+          <p>
+            Submitting documents that are not yours, altered, or forged ends our
+            relationship immediately and may be reported to the authorities.
+          </p>
+          <p>
+            You must be at least 16 years old to apply. Most of the roles we advertise
+            require you to be 18 or older.
+          </p>
+        </section>
+
+        <section id="t-collect" data-reveal="up">
+          <h2>4. What we collect</h2>
+          <p>When you apply, we collect:</p>
+          <ul>
+            <li>Your full name, phone number, age, gender, nationality and marital status</li>
+            <li>The number of people in your family</li>
+            <li>Your education, current job, work experience, skills and the languages you speak</li>
+            <li>Whether you have been arrested or convicted, and the details if you have</li>
+            <li>A photograph of your face (a selfie)</li>
+            <li>Photographs of the front and back of your national identity document</li>
+          </ul>
+          <p>
+            We also record the date you applied, the job you applied for, and the fact that
+            you accepted these terms together with the time you accepted them.
+          </p>
+          <p>
+            Our server records the IP address a submission came from. We use this only to
+            limit how many applications can be sent from one connection, which protects the
+            service from automated abuse.
+          </p>
+          <p>
+            The website does not use advertising or tracking cookies. Jobs you save are
+            stored in your own browser and never sent to us.
+          </p>
+        </section>
+
+        <section id="t-use" data-reveal="up">
+          <h2>5. How we use it</h2>
+          <p>We use your information only to:</p>
+          <ul>
+            <li>Assess whether you match a role we are recruiting for</li>
+            <li>Introduce you to an employer and support you through interviews</li>
+            <li>Prepare and submit work permit and visa applications in your name</li>
+            <li>Arrange medical checks, translations, travel and arrival where these apply</li>
+            <li>Contact you about your application and keep your status up to date</li>
+          </ul>
+          <p>
+            Your identity documents exist on your file for one reason: a work permit and
+            visa application cannot be made without them. We do not use them for anything
+            else, and we do not sell or rent your information to anybody, for any purpose.
+          </p>
+        </section>
+
+        <section id="t-share" data-reveal="up">
+          <h2>6. Who we share it with</h2>
+          <p>Your file is shared only with:</p>
+          <ul>
+            <li>Aryos Group staff working on your application</li>
+            <li>The employer offering the specific role you applied for</li>
+            <li>The consulate, embassy or immigration authority handling your permit</li>
+            <li>
+              Where a step requires it, an official translator, a medical provider or a
+              travel agent — and only the part of your file that step needs
+            </li>
+          </ul>
+          <p>
+            We may also disclose information where a law or a court order requires it. We
+            will tell you if that happens, unless we are legally prevented from doing so.
+          </p>
+          <p>
+            Some of these recipients are outside Iraq, because that is where the job and the
+            consulate are. By applying you accept that your information will be transferred
+            to the country you are applying to work in.
+          </p>
+        </section>
+
+        <section id="t-keep" data-reveal="up">
+          <h2>7. How long we keep it</h2>
+          <ul>
+            <li>
+              <strong>Active files</strong> are kept while your application is in progress
+              and for the duration of any placement that results from it.
+            </li>
+            <li>
+              <strong>Inactive files</strong> — no contact and no progress for 24 months —
+              are deleted.
+            </li>
+            <li>
+              <strong>Identity photographs</strong> are deleted once the permit or visa
+              decision is final and no appeal is open.
+            </li>
+          </ul>
+          <p>You can ask us to delete your file sooner. See section 8.</p>
+        </section>
+
+        <section id="t-rights" data-reveal="up">
+          <h2>8. Your rights</h2>
+          <p>At any time you can ask us to:</p>
+          <ul>
+            <li>Tell you what we hold about you, and give you a copy</li>
+            <li>Correct anything that is wrong or out of date</li>
+            <li>Delete your file entirely</li>
+            <li>Stop contacting you</li>
+            <li>Withdraw your agreement to these terms</li>
+          </ul>
+          <p>
+            Write to <a href="mailto:info@aryosgroup.com">info@aryosgroup.com</a> or message
+            the office on WhatsApp with your name and, if you have one, your visa key. We
+            answer within 48 hours and act within 30 days.
+          </p>
+          <p class="legal__callout">
+            Withdrawing your agreement or asking for deletion while an application is with a
+            consulate means we can no longer act for you, and that application will normally
+            have to be abandoned. We will explain the consequences before we do anything
+            irreversible.
+          </p>
+        </section>
+
+        <section id="t-security" data-reveal="up">
+          <h2>9. Security</h2>
+          <p>
+            Applications are sent to us over an encrypted connection. Access to files is
+            limited to staff working on them. Identity photographs are not published, not
+            posted on social media, and not included in anything we send to a third party
+            unless that party needs them for your permit.
+          </p>
+          <p>
+            No system is perfectly secure. If a breach ever affects your information, we
+            will tell you and the relevant authority without delay.
+          </p>
+        </section>
+
+        <section id="t-nooffer" data-reveal="up">
+          <h2>10. No guarantee of a job or a visa</h2>
+          <p>
+            Applying does not create a contract of employment and does not guarantee an
+            interview, an offer, a permit or a visa. Hiring decisions belong to the
+            employer. Permit and visa decisions belong to the authorities of the destination
+            country. We cannot overturn a refusal, and we do not promise a particular
+            outcome or timescale.
+          </p>
+          <p>
+            Salaries, hours and benefits shown on this website are the terms the employer
+            has given us at the time of publishing. The contract you are offered is the
+            document that governs your employment.
+          </p>
+        </section>
+
+        <section id="t-employers" data-reveal="up">
+          <h2>11. Terms for employers</h2>
+          <p>
+            Employers who engage us agree to provide accurate role, salary and contract
+            information; to treat candidates lawfully and equally; to meet the labour and
+            immigration obligations of their own country; and not to pass candidate
+            information to anyone outside their hiring process. Commercial terms are set out
+            in the separate agreement we sign with each employer.
+          </p>
+        </section>
+
+        <section id="t-site" data-reveal="up">
+          <h2>12. Using this website</h2>
+          <p>
+            The content, wording, layout and images on this site belong to Aryos Group.
+            You may read and share them; you may not copy them to present as your own work
+            or to operate a competing service.
+          </p>
+          <p>
+            The visa status page is for candidates with a file at our office. Do not attempt
+            to look up keys that are not yours. Statuses are updated by case officers during
+            office hours and may lag behind a decision by a short time.
+          </p>
+          <p>
+            We aim to keep the site available and accurate, but we do not guarantee it will
+            be uninterrupted or error-free.
+          </p>
+        </section>
+
+        <section id="t-changes" data-reveal="up">
+          <h2>13. Changes to these terms</h2>
+          <p>
+            We may update this page. The date at the top always shows the current version.
+            If a change materially affects how we handle your information, we will contact
+            candidates with an active file directly.
+          </p>
+          <p>
+            These terms are governed by the laws of the Kurdistan Region of Iraq. Nothing
+            here removes a right you have under a law that applies to you and cannot be
+            set aside by agreement.
+          </p>
+        </section>
+
+        <section id="t-contact" data-reveal="up">
+          <h2>14. How to contact us</h2>
+          <ul class="legal__contact">
+            <li><strong>Email</strong> <a href="mailto:info@aryosgroup.com">info@aryosgroup.com</a></li>
+            <li><strong>Phone</strong> <a href="tel:+9647500000000">+964 750 000 0000</a></li>
+            <li><strong>WhatsApp</strong> <a href="https://wa.me/9647500000000">+964 750 000 0000</a></li>
+            <li><strong>Office</strong> Gulan Street, Erbil, Kurdistan Region, Iraq</li>
+            <li><strong>Hours</strong> Sunday to Thursday, 09:00 – 17:00</li>
+          </ul>
+          <p class="home-contact__actions">
+            <a class="btn btn--primary btn--lg" href="contact.html" data-i18n="cta.contactTeam">Contact the team</a>
+            <a class="btn btn--outline btn--lg" href="jobs.html">Back to jobs</a>
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="container footer__grid" data-reveal-group="110">
+
+    <div class="footer__brand" data-reveal="up">
+      <span class="logo logo--footer">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span class="logo__text">
+          <span class="logo__name">ARYOS</span>
+          <span class="logo__sub">GROUP</span>
+        </span>
+      </span>
+      <p>
+        International recruitment for candidates from the Middle East —
+        jobs, contracts and visa support across Europe and North America.
+      </p>
+    </div>
+
+    <nav class="footer__col" aria-label="Quick links" data-reveal="up">
+      <h2 class="footer__title" data-i18n="footer.quickLinks">Quick links</h2>
+      <ul>
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#reviews" data-i18n="nav.reviews">Reviews</a></li>
+        <li><a href="jobs.html" data-i18n="nav.jobs">Jobs</a></li>
+        <li><a href="visa.html" data-i18n="nav.visa">Visa Status</a></li>
+        <li><a href="employers.html" data-i18n="nav.employers">Employers</a></li>
+        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="terms.html">Terms &amp; Privacy</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col" data-reveal="up">
+      <h2 class="footer__title" data-i18n="footer.contact">Contact</h2>
+      <ul>
+        <li><a href="tel:+9647500000000">+964 750 000 0000</a></li>
+        <li><a href="https://wa.me/9647500000000" data-i18n="cta.whatsapp">WhatsApp</a></li>
+        <li><a href="mailto:info@aryosgroup.com">info@aryosgroup.com</a></li>
+        <li>Gulan Street, Erbil, Iraq</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer__bottom">
+    <p>&copy; <span data-year>2026</span> Aryos Group. All rights reserved.</p>
+    <p>Erbil Â· Berlin Â· Toronto</p>
+  </div>
+</footer>
+
+
+<!-- ============================ APPLY WIZARD ============================
+     Injected on every page. Opens when a candidate taps "Apply Now" on a job
+     card. Built as one overlay rather than a page so the candidate never
+     loses the job list behind them. -->
+<div class="apply" data-apply hidden>
+  <div class="apply__scrim" data-apply-close></div>
+
+  <div class="apply__panel" role="dialog" aria-modal="true"
+       aria-labelledby="apply-heading" data-apply-panel>
+
+    <header class="apply__head">
+      <div class="apply__head-row">
+        <p class="apply__job" data-apply-job>Application</p>
+        <button type="button" class="apply__close" data-apply-close aria-label="Close application">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <h2 class="sr-only" id="apply-heading">Job application</h2>
+      <div class="apply__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+           aria-valuenow="0" data-apply-progress>
+        <span class="apply__progress-bar" data-apply-bar></span>
+      </div>
+      <p class="apply__count" data-apply-count aria-live="polite"></p>
+    </header>
+
+    <div class="apply__body" data-apply-body></div>
+
+    <!-- Upload meter. Three photographs over mobile data is a long
+         silence otherwise; hidden until the send actually starts. -->
+    <div class="aprog" data-aprogress hidden>
+      <div class="aprog__bar"><span data-aprogress-fill></span></div>
+      <p class="aprog__label" data-aprogress-label role="status" aria-live="polite"></p>
+    </div>
+    <footer class="apply__foot">
+      <button type="button" class="btn btn--ghost apply__back" data-apply-back>Back</button>
+      <button type="button" class="btn btn--primary apply__next" data-apply-next>Continue</button>
+    </footer>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+

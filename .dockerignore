@@ -1,0 +1,31 @@
+# Secrets must never reach the image.
+.env
+bot/token.txt
+
+# Runtime data — this lives on the volume, not in the image.
+bot/clients.json
+bot/clients.json.tmp
+bot/jobs.json
+bot/jobs.json.tmp
+bot/applications.json
+bot/applications.json.tmp
+media/jobs/*
+media/applications/*
+!media/jobs/README.txt
+!media/applications/README.txt
+
+# Not needed at runtime.
+.git
+.gitignore
+__pycache__/
+*.pyc
+*.zip
+DEPLOY.md
+README.md
+render.yaml
+nixpacks.toml
+
+# Full-size image originals and the scripts that resize them. Both are used
+# when preparing assets, never when serving them.
+assets-source/
+tools/

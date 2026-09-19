@@ -1,0 +1,42 @@
+# Secrets — never commit these
+.env
+bot/token.txt
+
+# Runtime data written by the bot (lives on the volume in production)
+bot/clients.json
+bot/clients.json.tmp
+bot/jobs.json
+bot/jobs.json.tmp
+bot/applications.json
+bot/applications.json.tmp
+
+# Uploaded photos
+media/jobs/*
+!media/jobs/README.txt
+# ...except the 30 photographs that ship with the seed vacancies
+# (ARY-1042 to ARY-1182) and the responsive copies built from them by
+# tools/make-job-photos.py -- .webp siblings and -600 widths, so the glob
+# is left open at the end. Nothing above ARY-1182 has a shipped photograph,
+# so every bot upload stays ignored and lands on the volume instead -- which
+# is also where a replacement for a seeded job goes, taking over from the
+# file shipped here.
+!media/jobs/ARY-10*
+!media/jobs/ARY-11*
+# Role photographs are shared by every vacancy with the same title and
+# ship with the code too. The directory has to be re-included first --
+# git will not look inside a directory the rule above excluded.
+!media/jobs/roles/
+media/applications/*
+!media/applications/README.txt
+
+# Python
+__pycache__/
+*.pyc
+
+# Tooling
+.claude/
+*.zip
+
+# Hero originals (multi-MB) — derivatives in media/ are what ship
+hero-sources/
+NEW PICS/
