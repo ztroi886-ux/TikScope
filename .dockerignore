@@ -12,6 +12,10 @@ bot/applications.json.tmp
 media/jobs/*
 media/applications/*
 !media/jobs/README.txt
+!media/jobs/ARY-10*
+!media/jobs/ARY-11*
+!media/jobs/roles/
+!media/jobs/roles/**
 !media/applications/README.txt
 
 # Not needed at runtime.
